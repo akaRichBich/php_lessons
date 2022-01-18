@@ -42,6 +42,12 @@ session_start();
                                         <?php echo $_SESSION['alert']; ?>
                                     </div>
                                     <?php } ?>
+                                    <?php if($_SESSION['user']) { ?>
+                                        <form action="task_14_1_handler.php" method="post">
+                                            <input type="text" name="logout" hidden>
+                                            <button class="btn btn-success mt-3">Logout</button>
+                                        </form>
+                                    <?php } ?>
                                     <form action="task_14_handler.php" method="post">
                                         <div class="form-group">
                                         	<label class="form-label" for="simpleinput">Email</label>
